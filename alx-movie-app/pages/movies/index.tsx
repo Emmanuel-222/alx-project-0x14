@@ -80,7 +80,7 @@ const Movies: React.FC<MProps> = () => {
       <div className="flex flex-wrap space-x-0 md:space-x-4 mt-4 md:mt-0">
         {
           ['All', 'Animation', 'Comedy', 'Fantasy'].map((genre: string, key: number) => (
-            <Button title={genre} key={key} action={() => setGenre(genre)} />
+            <Button title={genre} key={key} action={() => setGenre(() => genre)} />
           ))
         }
       </div>
